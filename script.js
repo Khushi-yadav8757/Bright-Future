@@ -144,11 +144,11 @@ const openLoginModal = () => {
   document.getElementById('enquiryName')?.focus();
 };
 loginTriggers.forEach(trigger => trigger.addEventListener('click', openLoginModal));
-document.querySelectorAll('.btn-apply').forEach(trigger => {
-  trigger.addEventListener('click', event => {
-    event.preventDefault();
-    openLoginModal();
-  });
+document.addEventListener('click', event => {
+  const trigger = event.target.closest('.btn-apply');
+  if (!trigger) return;
+  event.preventDefault();
+  openLoginModal();
 });
 loginClose?.addEventListener('click', closeLoginModal);
 loginModal?.addEventListener('click', event => {
@@ -176,7 +176,7 @@ loginForm?.addEventListener('submit', event => {
   const message = document.getElementById('enquiryMessage').value.trim() || 'No message provided';
   const enquiry = `New enquiry%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0ACourse: ${encodeURIComponent(course)}%0ACollege: ${encodeURIComponent(college || 'Not specified')}%0ALocation: ${encodeURIComponent(location || 'Not specified')}%0ABudget: ${encodeURIComponent(budget || 'Not specified')}%0AMessage: ${encodeURIComponent(message)}`;
   enquiryStatus.textContent = 'Enquiry submitted. Opening WhatsApp...';
-  window.location.href = `https://wa.me/919599631571?text=${enquiry}`;
+  window.location.href = `https://wa.me/919599613282?text=${enquiry}`;
   loginForm.reset();
 });
 
