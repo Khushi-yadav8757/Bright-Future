@@ -144,6 +144,7 @@ const openLoginModal = () => {
   document.getElementById('enquiryName')?.focus();
 };
 loginTriggers.forEach(trigger => trigger.addEventListener('click', openLoginModal));
+openLoginModal();
 document.addEventListener('click', event => {
   const trigger = event.target.closest('.btn-apply');
   if (!trigger) return;
