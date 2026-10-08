@@ -16,11 +16,29 @@ toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoo
 // ===================== Mobile menu toggle =====================
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
+const closeMobileMenu = () => {
+  navLinks?.classList.remove('open');
+  burger?.classList.remove('active');
+  burger?.setAttribute('aria-expanded', 'false');
+  burger?.setAttribute('aria-label', 'Open menu');
+  navbar?.classList.remove('mobile-menu-open');
+};
 burger?.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  burger.classList.toggle('active');
+  const isOpen = navLinks.classList.toggle('open');
+  burger.classList.toggle('active', isOpen);
+  burger.setAttribute('aria-expanded', String(isOpen));
+  burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  navbar.classList.toggle('mobile-menu-open', isOpen);
 });
-navLinks?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+navLinks?.querySelectorAll('a, .login-trigger').forEach(item => item.addEventListener('click', closeMobileMenu));
+document.addEventListener('click', event => {
+  if (navLinks?.classList.contains('open') && !navLinks.contains(event.target) && !burger?.contains(event.target)) {
+    closeMobileMenu();
+  }
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMobileMenu();
+});
 
 // ===================== Animated stat counters =====================
 const counters = document.querySelectorAll('.num[data-count]');
