@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightFuture | Shape Your Future With the Right College</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== Navbar ===================== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="logo"><img src="images/logo.png" alt="Bright Future logo"></span><span class="brand-name">Bright <span class="brand-future">Future</span></span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="colleges.html" class="drop">Colleges <i class="fa-solid fa-caret-down"></i></a></li>
+      <li class="contact-menu">
+        <details>
+          <summary>Contact Us <i class="fa-solid fa-caret-down"></i></summary>
+          <div class="contact-dropdown">
+            <a href="https://wa.me/919599631571" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.instagram.com/brightfuture_2026_" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61592989712548" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          </div>
+        </details>
+      </li>
+      <li><button type="button" class="btn-login login-trigger"><i class="fa-solid fa-pen-to-square"></i> Enquiry Now</button></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===================== Hero ===================== -->
+<header class="hero">
+  <div class="container hero-inner">
+    <span class="cap-icon">🎓</span>
+    <h1>Choose Right. <span class="underline">Succeed Bright
+      <svg viewBox="0 0 300 16" preserveAspectRatio="none"><path d="M2 12 C 80 2, 220 2, 298 8" stroke="#FFC22E" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+    </span></h1>
+    <p class="tagline">From course selection to college admission — we're here to guide you..</p>
+    <form class="search-box" id="siteSearch">
+      <input id="searchInput" type="search" placeholder="Search for colleges, streams, courses and more.." aria-label="Search colleges and courses">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </form>
+    <p class="search-result" id="searchResult" role="status" aria-live="polite"></p>
+    <a href="https://wa.me/919599631571" class="btn-counselor" target="_blank" rel="noopener noreferrer"><span class="arrow-dot"><i class="fa-brands fa-whatsapp"></i></span> Talk to a Counselor</a>
+    <div class="hero-highlights" aria-label="Bright Future benefits">
+      <div class="hero-highlight"><i class="fa-solid fa-compass"></i><span>Course Guidance</span></div>
+      <div class="hero-highlight"><i class="fa-solid fa-building-columns"></i><span>Top Universities</span></div>
+      <div class="hero-highlight"><i class="fa-solid fa-file-circle-check"></i><span>Admission Support</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== Stats ===================== -->
+<div class="container stats-wrap">
+  <div class="stats-card">
+    <div class="stat"><span class="icon c1"><i class="fa-solid fa-book-open"></i></span><div><div class="num" data-count="50">0</div><div class="label">Total Courses</div></div></div>
+    <div class="stat"><span class="icon c2"><i class="fa-solid fa-building-columns"></i></span><div><div class="num" data-count="345">0</div><div class="label">Universities</div></div></div>
+    <div class="stat"><span class="icon c3"><i class="fa-solid fa-wrench"></i></span><div><div class="num" data-count="12">0</div><div class="label">Serving Since</div></div></div>
+    <div class="stat"><span class="icon c4"><i class="fa-solid fa-user-graduate"></i></span><div><div class="num" data-count="5000">0</div><div class="label">Students Served</div></div></div>
+    <div class="stat"><span class="icon c5"><i class="fa-solid fa-graduation-cap"></i></span><div><div class="num" data-count="40000">0</div><div class="label">Students Counselled</div></div></div>
+  </div>
+</div>
+
+<!-- ===================== Popular Courses ===================== -->
+<section class="section courses-section" id="courses">
+  <div class="container">
+    <div class="section-head">
+      <span class="course-kicker"><i class="fa-solid fa-graduation-cap"></i> Explore Your Options</span>
+      <h2>Popular Course in <span class="accent">India &amp; Abroad
+        <svg viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M2 10 C 80 2, 220 2, 298 6" stroke="#FFC22E" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span></h2>
+      <p class="course-intro">Explore top career options and get admission guidance for your dream course.</p>
+    </div>
+    <div class="course-row reveal-group">
+      <a class="course-card" href="colleges.html?stream=medical" data-keywords="medical mbbs bds bhms bams" aria-label="View medical colleges"><img class="course-image" src="images/medical.png" alt="Medical education"><span class="badge">🩺</span>Medical</a>
+      <a class="course-card" href="colleges.html?stream=engineering" data-keywords="engineering btech mtech" aria-label="View engineering colleges"><img class="course-image" src="images/engineering.png" alt="Engineering education"><span class="badge">⚙️</span>Engineering</a>
+      <a class="course-card" href="colleges.html?stream=management" data-keywords="management mba pgdm" aria-label="View management colleges"><img class="course-image" src="images/management.png" alt="Management education"><span class="badge">💼</span>Management</a>
+      <div class="course-card" data-keywords="ayurveda bams"><img class="course-image" src="images/ayurveda.png" alt="Ayurveda education"><span class="badge">🌿</span>Ayurveda</div>
+      <div class="course-card" data-keywords="pharmacy"><img class="course-image" src="images/pharmacy.png" alt="Pharmacy education"><span class="badge">💊</span>Pharmacy</div>
+      <div class="course-card" data-keywords="paramedical"><img class="course-image" src="images/paramedical.png" alt="Paramedical education"><span class="badge">🧪</span>Paramedical</div>
+      <div class="course-card" data-keywords="agriculture"><img class="course-image" src="images/agriculture.png" alt="Agriculture education"><span class="badge">🌾</span>Agriculture</div>
+      <div class="course-card" data-keywords="law"><img class="course-image" src="images/law.png" alt="Law education"><span class="badge">⚖️</span>Law</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Dream destination ===================== -->
+<section class="dream-banner">
+  <div class="container dream-grid">
+    <div>
+      <h2>Do You Have A Dream Destination On <span class="hl">Your Mind?</span></h2>
+      <div class="dream-sub">Let's Help You Choose The Best Suited Option!</div>
+      <div><a href="https://wa.me/919599631571" class="btn-yellow" target="_blank" rel="noopener noreferrer">Talk to a Counselor <i class="fa-brands fa-whatsapp"></i></a></div>
+    </div>
+    <div class="dream-photo-wrap">
+      <img class="dream-photo" src="images/image.png" alt="Students receiving career counselling">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== About Us ===================== -->
+<section class="section about-section" id="about">
+  <div class="container about-content">
+    <div class="section-head">
+      <h2>About <span class="accent">Bright Future
+        <svg viewBox="0 0 220 14" preserveAspectRatio="none"><path d="M2 10 C 66 2, 154 2, 218 6" stroke="#FFC22E" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span></h2>
+    </div>
+    <p class="about-intro">Bright Future is a trusted education consultancy in Noida, helping students choose the right engineering and medical courses in India and abroad. Our expert counselors guide students through MBBS, BDS, BAMS, BHMS, PGDM and other higher-education admissions with transparent advice, university selection and application support.</p>
+  </div>
+</section>
+
+<!-- ===================== Top engineering colleges ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Top Colleges of <span class="accent">Engineering
+        <svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 10 C 60 2, 140 2, 198 6" stroke="#FFC22E" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span></h2>
+    </div>
+    <div class="college-grid reveal-group">
+
+      <div class="college-card">
+        <div class="college-media">
+          <img class="photo" src="images/rvce.png" alt="RV College of Engineering">
+          <div class="rating">★★★★★ 5</div>
+          <div class="name-strip">
+            <span class="logo-chip">RV</span>
+            <div><h4>RV College of Engineering</h4><div class="loc"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</div></div>
+          </div>
+        </div>
+        <div class="college-body">
+          <div class="row"><span class="k">Course</span><span class="v">B.Tech</span></div>
+          <div class="row"><span class="k">Counselling Fee</span><span class="v">₹2.84 Lac</span></div>
+          <div class="row"><span class="k">Management Quota</span><span class="v">₹72 Lac</span></div>
+          <a href="https://wa.me/919599631571" class="btn-apply" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="college-card">
+        <div class="college-media">
+          <img class="photo" src="images/rv-university.png" alt="RV University">
+          <div class="rating">★★★★★ 5</div>
+          <div class="name-strip">
+            <span class="logo-chip">RV</span>
+            <div><h4>RV University</h4><div class="loc"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</div></div>
+          </div>
+        </div>
+        <div class="college-body">
+          <div class="row"><span class="k">Course</span><span class="v">B.Tech</span></div>
+          <div class="row"><span class="k">Per Year Fees</span><span class="v">₹4 Lac / Year</span></div>
+          <a href="https://wa.me/919599631571" class="btn-apply" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="college-card">
+        <div class="college-media">
+          <img class="photo" src="images/bmsce.png" alt="BMS College of Engineering">
+          <div class="rating">★★★★★ 5</div>
+          <div class="name-strip">
+            <span class="logo-chip">BMS</span>
+            <div><h4>BMS College of Engineering</h4><div class="loc"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</div></div>
+          </div>
+        </div>
+        <div class="college-body">
+          <div class="row"><span class="k">Course</span><span class="v">B.Tech</span></div>
+          <div class="row"><span class="k">Counselling Fee</span><span class="v">₹2.84 Lac</span></div>
+          <div class="row"><span class="k">Management Quota</span><span class="v">₹52 Lac</span></div>
+          <a href="https://wa.me/919599631571" class="btn-apply" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="center"><a href="colleges.html" class="btn-viewall">View All <i class="fa-solid fa-arrow-right"></i></a></div>
+  </div>
+</section>
+
+<!-- ===================== Services ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>BrightFuture <span class="accent">Services
+        <svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 10 C 60 2, 140 2, 198 6" stroke="#FFC22E" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span></h2>
+    </div>
+    <div class="services-grid reveal-group">
+      <div class="service-card"><span class="icon"><i class="fa-solid fa-rocket"></i></span><h4>Career Counselling</h4></div>
+      <div class="service-card"><span class="icon"><i class="fa-solid fa-building-columns"></i></span><h4>University Shortlist</h4></div>
+      <div class="service-card"><span class="icon"><i class="fa-solid fa-file-lines"></i></span><h4>Application Documentation</h4></div>
+      <div class="service-card"><span class="icon"><i class="fa-solid fa-display"></i></span><h4>Live Application Tracking</h4></div>
+      <div class="service-card"><span class="icon"><i class="fa-solid fa-person-chalkboard"></i></span><h4>Interview Training</h4></div>
+      <div class="service-card"><span class="icon"><i class="fa-solid fa-hand-sparkles"></i></span><h4>Successful Admits</h4></div>
+      <div class="service-card"><span class="icon"><i class="fa-solid fa-building-columns"></i></span><h4>Pre-Departure Orientation</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MBA Entrance Exams ===================== -->
+<section class="partners-strip exam-strip">
+  <div class="container">
+    <div class="partners-head">
+      <div>
+        <h2>Our <span style="color:var(--yellow-dark)">MBA</span> Entrance Exams</h2>
+        <p style="margin:8px 0 0; color:var(--ink-soft); font-size:1rem; font-weight:600;">We guide for these entrance exams</p>
+      </div>
+      <a href="#" class="btn-outline"><i class="fa-solid fa-download"></i> Brochure Download</a>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <a class="partner-logo exam-card cat" href="colleges.html?exam=cat" aria-label="View colleges accepting CAT">
+          <span class="exam-badge">CAT</span>
+          <div class="exam-name">CAT</div>
+          <div class="exam-full">Common Admission Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card xat" href="colleges.html?exam=xat" aria-label="View colleges accepting XAT">
+          <span class="exam-badge">XAT</span>
+          <div class="exam-name">XAT</div>
+          <div class="exam-full">Xavier Aptitude Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card cmat" href="colleges.html?exam=cmat" aria-label="View colleges accepting CMAT">
+          <span class="exam-badge">CMAT</span>
+          <div class="exam-name">CMAT</div>
+          <div class="exam-full">Common Management Admission Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card mat" href="colleges.html?exam=mat" aria-label="View colleges accepting MAT">
+          <span class="exam-badge">MAT</span>
+          <div class="exam-name">MAT</div>
+          <div class="exam-full">Management Aptitude Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card nmat" href="colleges.html?exam=nmat" aria-label="View colleges accepting NMAT">
+          <span class="exam-badge">NMAT</span>
+          <div class="exam-name">NMAT</div>
+          <div class="exam-full">NMIMS Management Aptitude Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card gmat" href="colleges.html?exam=gmat" aria-label="View colleges accepting GMAT">
+          <span class="exam-badge">GMAT</span>
+          <div class="exam-name">GMAT</div>
+          <div class="exam-full">Graduate Management Admission Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card gre" href="colleges.html?exam=gre" aria-label="View colleges accepting GRE">
+          <span class="exam-badge">GRE</span>
+          <div class="exam-name">GRE</div>
+          <div class="exam-full">Graduate Record Examination</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card cat" href="colleges.html?exam=cat" aria-hidden="true" tabindex="-1">
+          <span class="exam-badge">CAT</span>
+          <div class="exam-name">CAT</div>
+          <div class="exam-full">Common Admission Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card xat" href="colleges.html?exam=xat" aria-hidden="true" tabindex="-1">
+          <span class="exam-badge">XAT</span>
+          <div class="exam-name">XAT</div>
+          <div class="exam-full">Xavier Aptitude Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card cmat" href="colleges.html?exam=cmat" aria-hidden="true" tabindex="-1">
+          <span class="exam-badge">CMAT</span>
+          <div class="exam-name">CMAT</div>
+          <div class="exam-full">Common Management Admission Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card mat" href="colleges.html?exam=mat" aria-hidden="true" tabindex="-1">
+          <span class="exam-badge">MAT</span>
+          <div class="exam-name">MAT</div>
+          <div class="exam-full">Management Aptitude Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card nmat" href="colleges.html?exam=nmat" aria-hidden="true" tabindex="-1">
+          <span class="exam-badge">NMAT</span>
+          <div class="exam-name">NMAT</div>
+          <div class="exam-full">NMIMS Management Aptitude Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card gmat" href="colleges.html?exam=gmat" aria-hidden="true" tabindex="-1">
+          <span class="exam-badge">GMAT</span>
+          <div class="exam-name">GMAT</div>
+          <div class="exam-full">Graduate Management Admission Test</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+        <a class="partner-logo exam-card gre" href="colleges.html?exam=gre" aria-hidden="true" tabindex="-1">
+          <span class="exam-badge">GRE</span>
+          <div class="exam-name">GRE</div>
+          <div class="exam-full">Graduate Record Examination</div>
+          <div class="exam-tag">MBA Admission</div>
+          <div class="exam-cta">Get Admission Guidance <span>→</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Testimonials ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>What Our <span class="accent">Student Say
+        <svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 10 C 60 2, 140 2, 198 6" stroke="#FFC22E" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span></h2>
+    </div>
+    <div class="testi-grid reveal-group">
+      <div class="testi-card">
+        <div class="testi-top">
+          <div class="testi-avatar">SS</div>
+          <h4>Sanaya Sharma</h4>
+          <div class="role">Student — Government Institute of Medical Sciences (GIMS), Greater Noida</div>
+        </div>
+        <div class="testi-body">
+          <span class="quote-mark">“</span>
+          <p>BrightFuture guided me through the admission process with clear and practical counselling. The team explained the documentation, college options, and admission steps properly. Their support made the process much easier for me and my family.</p>
+          <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-top">
+          <div class="testi-avatar">VG</div>
+          <h4>Vinita Gupta</h4>
+          <div class="role">Student — Sharda School of Medical Sciences &amp; Research, Greater Noida</div>
+        </div>
+        <div class="testi-body">
+          <span class="quote-mark">“</span>
+          <p>I had a very good experience with BrightFuture Consultancy. Their counsellors understood my requirements and helped me make the right decision about my medical education. The team was responsive and supportive throughout the process.</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-top">
+          <div class="testi-avatar">RK</div>
+          <h4>Rishi Kumar</h4>
+          <div class="role">Student — Noida International Institute of Medical Sciences (NIIMS), Greater Noida</div>
+        </div>
+        <div class="testi-body">
+          <span class="quote-mark">“</span>
+          <p>BrightFuture provided excellent guidance from counselling to admission. They explained every step clearly and helped me with the required documentation. I really appreciate the professional and supportive approach of their team.</p>
+          <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Footer ===================== -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><span class="chev">›</span><a href="index.html">Home</a></li>
+        <li><span class="chev">›</span><a href="#about">About Us</a></li>
+        <li><span class="chev">›</span><a href="colleges.html">Colleges</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p class="footer-contact"><i class="fa-solid fa-location-dot"></i> B Block, 135, Sector 2, Noida, Uttar Pradesh</p>
+      <a class="footer-contact" href="https://wa.me/919599631571"><i class="fa-brands fa-whatsapp"></i> +91 9599631571</a>
+    </div>
+    <div class="footer-col">
+      <h4>Social Links</h4>
+      <div class="social-links" aria-label="Social media links">
+        <a href="https://www.instagram.com/brightfuture_2026_" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://share.google/alsv1Vi0kh2aQZi6U" aria-label="Location"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61592989712548" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://wa.me/919599631571" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 BrightFuture. All rights reserved.</div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="login-modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden>
+  <div class="login-panel">
+    <button type="button" class="login-close" id="loginClose" aria-label="Close enquiry form">&times;</button>
+    <div class="login-heading">
+      <span class="login-icon"><i class="fa-solid fa-comments"></i></span>
+      <div><h2 id="loginTitle">Enquiry Form</h2><p>Share your details and our counsellor will contact you.</p></div>
+    </div>
+    <form class="login-form" id="loginForm">
+      <label for="enquiryName">Full Name</label>
+      <input id="enquiryName" type="text" placeholder="Enter your name" autocomplete="name" required>
+      <label for="enquiryPhone">Mobile Number</label>
+      <input id="enquiryPhone" type="tel" placeholder="Enter your mobile number" autocomplete="tel" pattern="[0-9 +()-]{10,}" required>
+      <label for="enquiryEmail">Email Address</label>
+      <input id="enquiryEmail" type="email" placeholder="Enter your email" autocomplete="email" required>
+      <label for="enquiryCourse">Course Interested In</label>
+      <input id="enquiryCourse" type="text" placeholder="e.g. B.Tech, MBA" required>
+      <label for="enquiryCollege">College Preference</label>
+      <select id="enquiryCollege">
+        <option value="">Select a college</option>
+        <option>RV College of Engineering</option>
+        <option>RV University</option>
+        <option>BMS College of Engineering</option>
+        <option>MSRIT</option>
+        <option>Other college</option>
+      </select>
+      <label for="enquiryLocation">Preferred Location</label>
+      <select id="enquiryLocation">
+        <option value="">Select a location</option>
+        <option>Bengaluru</option>
+        <option>Vellore</option>
+        <option>Chennai</option>
+        <option>Other location</option>
+      </select>
+      <label for="enquiryBudget">Budget</label>
+      <select id="enquiryBudget">
+        <option value="">Select your budget</option>
+        <option>Below ₹2 Lac</option>
+        <option>₹2 Lac - ₹4 Lac</option>
+        <option>₹4 Lac - ₹6 Lac</option>
+        <option>Above ₹6 Lac</option>
+        <option value="custom">Other budget</option>
+      </select>
+      <input id="customBudget" type="text" placeholder="Write your budget, e.g. ₹30 Lac or ₹40 Lac" hidden>
+      <label for="enquiryMessage">Message</label>
+      <textarea id="enquiryMessage" rows="3" placeholder="Tell us how we can help me"></textarea>
+      <button type="submit">Submit Enquiry <i class="fa-solid fa-arrow-right"></i></button>
+      <p class="enquiry-status" id="enquiryStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
