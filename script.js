@@ -124,8 +124,16 @@ const loginClose = document.getElementById('loginClose');
 const loginForm = document.getElementById('loginForm');
 const enquiryStatus = document.getElementById('enquiryStatus');
 const loginTriggers = document.querySelectorAll('.login-trigger');
+const collegeSelect = document.getElementById('enquiryCollege');
+const customCollege = document.getElementById('customCollege');
 const budgetSelect = document.getElementById('enquiryBudget');
 const customBudget = document.getElementById('customBudget');
+collegeSelect?.addEventListener('change', () => {
+  const isCustomCollege = collegeSelect.value === 'custom';
+  customCollege.hidden = !isCustomCollege;
+  customCollege.required = isCustomCollege;
+  if (isCustomCollege) customCollege.focus();
+});
 budgetSelect?.addEventListener('change', () => {
   const isCustomBudget = budgetSelect.value === 'custom';
   customBudget.hidden = !isCustomBudget;
@@ -168,17 +176,24 @@ loginForm?.addEventListener('submit', event => {
   const phone = document.getElementById('enquiryPhone').value.trim();
   const email = document.getElementById('enquiryEmail').value.trim();
   const course = document.getElementById('enquiryCourse').value.trim();
-  const college = document.getElementById('enquiryCollege').value;
-  const location = document.getElementById('enquiryLocation').value;
+  const selectedCollege = collegeSelect.value;
+  const college = selectedCollege === 'custom'
+    ? customCollege.value.trim()
+    : selectedCollege;
+  const city = document.getElementById('enquiryCity').value;
   const selectedBudget = document.getElementById('enquiryBudget').value;
   const budget = selectedBudget === 'custom'
     ? document.getElementById('customBudget').value.trim()
     : selectedBudget;
   const message = document.getElementById('enquiryMessage').value.trim() || 'No message provided';
-  const enquiry = `New enquiry%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0ACourse: ${encodeURIComponent(course)}%0ACollege: ${encodeURIComponent(college || 'Not specified')}%0ALocation: ${encodeURIComponent(location || 'Not specified')}%0ABudget: ${encodeURIComponent(budget || 'Not specified')}%0AMessage: ${encodeURIComponent(message)}`;
+  const enquiry = `New enquiry%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0ACourse: ${encodeURIComponent(course)}%0ACollege: ${encodeURIComponent(college || 'Not specified')}%0ACity: ${encodeURIComponent(city || 'Not specified')}%0ABudget: ${encodeURIComponent(budget || 'Not specified')}%0AMessage: ${encodeURIComponent(message)}`;
   enquiryStatus.textContent = 'Enquiry submitted. Opening WhatsApp...';
   window.location.href = `https://wa.me/919599613282?text=${enquiry}`;
   loginForm.reset();
+  customCollege.hidden = true;
+  customCollege.required = false;
+  customBudget.hidden = true;
+  customBudget.required = false;
 });
 
 // ===================== College stream filter =====================
